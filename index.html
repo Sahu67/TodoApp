@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sado - TODO App</title>
+
+    <!-- Favicon link -->
+    <link rel="icon" href="https://img.icons8.com/parakeet/48/null/notepad.png" />
+
+    <!--  Bootstrap CSS link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">SADO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="enableDarkMode()" id="darkMode-btn">Enble Dark
+                Mode</button>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="jumbotron" id="jumbo">
+            <h1 class="display-4">Todo App - SADO</h1>
+            <p class="lead">This is a simple 'Todo App' to save, complete & delete todo(s). You can enter your daily
+                task in our app, press green button after completion of your todo task to save the completed todo(s)..
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control inp-title" id="title" aria-describedby="emailHelp">
+                <label for="description">Description</label>
+                <textarea class="form-control inp-desc" id="description" rows="3"></textarea>
+            </div>
+        </form>
+        <button class="btn btn-primary add-note-btn">Add note</button>
+        <button class="btn btn-primary clear-txt-btn">Clear</button>
+        <button class="btn btn-danger delete-all-btn">Delete all todo's</button>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="container">
+        <div class="btn-group mx-auto w-100" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" onclick="displaySavedTodo()">Saved Todo(s)</button>
+            <button type="button" class="btn btn-secondary" onclick="displayCompletedTodo()">Completed Todo(s)</button>
+        </div>
+        <div class="container">
+            <div class="row saved-todos py-3" style="justify-content: center;"></div>
+            <div class="row completed-todos mb-3" style="justify-content: center;"></div>
+        </div>
+    </div>
+
+
+    <!--  Bootstrap Js links  -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

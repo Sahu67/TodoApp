@@ -1,0 +1,39 @@
+html, body {
+    scroll-behavior: smooth;
+}
+
+.dark {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+.dark:focus {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+.sh-card {
+    width: 16rem;
+    margin-right: 1rem;
+}
+
+.saved-todos, .completed-todos, .card, .c-todo {
+    transition: all 0.8s ease;
+}
+
+.c-delete-btn {
+    position: absolute;
+    right: 0;
+    height: 2rem;
+}
+.c-delete-img {
+    height: 1.35rem;
+    transform: translateY(-21%);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .sh-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}
